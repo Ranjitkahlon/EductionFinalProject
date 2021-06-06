@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+
+    .links_li {
+        padding: 14px;
+        text-transform: uppercase;
+        margin: 15px;
+    }
+
+    a{
+        text-decoration:none;
+        color:black;
+
+    }
+
+    h1 {
+        font-size: 60px;
+        color: red;
+    }
+
+    </style>
+
+<div class="container" style="text-align:center";>
+   
+        <h1> Welcome to Admin Dashboard</h1>
+  
+<ul>
+    
+    <li class="links_li"><a href="@Url.Action("Index","Staffs")">Staff</a></li>
+    <li class="links_li"><a href="@Url.Action("Index","Students")">Student</a></li>
+    <li class="links_li"><a href="@Url.Action("Index","CourseRecords")">Courses</a></li>
+    <li class="links_li"><a href="@Url.Action("Index","Queries")">Contact</a></li>
+  
+</ul>
+       
+    </div>

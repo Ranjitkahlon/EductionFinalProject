@@ -1,0 +1,98 @@
+﻿@model IEnumerable<EductionFinalProject.Models.Staff>
+
+@{
+    ViewData["Title"] = "viewMembers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<style>
+
+    * {
+        text-align: center;
+    }
+
+    tr {
+        border: 2px solid black;
+    }
+
+    th {
+        border: 2px solid black;
+    }
+
+
+
+    .table {
+        margin: auto;
+        font-size: 25px;
+    }
+
+    h1 {
+        background-color:aqua;
+        color:black;
+        font-size:20px;
+        padding:20px;
+        margin-bottom:15px;
+
+     
+    }
+
+</style>
+
+
+
+<h1>View Members</h1>
+
+        <div class="wrap">
+            <div class="wrapper">
+                <div class="content">
+                    <div class="about">
+                        <div class="about-top">
+                            <div class="about-left">
+                                <h3>Our Staff Members</h3>
+                                <div class="left-img">
+                                    <img src="images/pic7.jpg" alt="" />
+                                </div>
+                                <div class="left-desc">
+
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.Product)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.Designation)
+                                                </th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+
+                                            @foreach (var item in Model)
+                                            {
+                                <div class="col-md-12">
+                                    <tr>
+                                        <td>
+
+                                            <h1>@Html.DisplayFor(modelItem => item.Product)</h1>
+                                        </td>
+                                        <td>
+                                            <h1>@Html.DisplayFor(modelItem => item.Designation)</h1>
+                                        </td>
+                                    </tr>
+                                </div>}
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>

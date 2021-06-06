@@ -1,0 +1,78 @@
+﻿@model EductionFinalProject.Models.Query
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<style>
+
+    * {
+        text-align: center;
+    }
+</style>
+
+<h1>Contact US Form</h1>
+
+
+<hr />
+
+
+<div class="wrap">
+    <div class="wrapper">
+        <div class="content">
+            <div class="contact">
+                <div class="contact-left">
+                    <div class="contact-desc">
+                        <h3>Contact</h3>
+                        <p>Fill the Below given form to Contact us. </p>
+                    </div>
+
+
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="Product" class="control-label"></label>
+                            <input asp-for="Product" class="form-control" />
+                            <span asp-validation-for="Product" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Email" class="control-label"></label>
+                            <input asp-for="Email" class="form-control" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Message" class="control-label"></label>
+                            <input asp-for="Message" class="form-control" />
+                            <span asp-validation-for="Message" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Create" class="btn btn-primary" />
+                        </div>
+                    </form>
+
+
+
+                </div>
+                <div class="sidebar">
+                  
+                   
+                </div>
+                <div class="clear"></div>
+                
+              
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }

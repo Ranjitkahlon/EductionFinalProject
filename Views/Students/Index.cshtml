@@ -1,0 +1,129 @@
+﻿@model IEnumerable<EductionFinalProject.Models.Student>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+
+    * {
+        text-align: center;
+    }
+
+    tr {
+        border: 2px solid black;
+    }
+
+    th {
+        border: 2px solid black;
+    }
+
+    td {
+        border: 2px solid black;
+    }
+
+    button {
+        font-size: 15px;
+        background-color: black;
+        color: white;
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+
+    .cre_ref {
+        text-decoration: none;
+        color: white;
+    }
+
+    .table {
+        margin: auto;
+        font-size: 15px;
+    }
+</style>
+
+
+
+<h1>Index</h1>
+
+<p>
+    <button>
+        <a asp-action="Create" class="cre_ref">Create New</a>
+    </button>
+</p>
+
+<div class="wrap">
+    <div class="wrapper">
+        <div class="content">
+            <div class="about">
+                <div class="about-top">
+                    <div class="about-left">
+                        <h3>View and New Students</h3>
+                        <div class="left-img">
+                            <img src="images/pic7.jpg" alt="" />
+                        </div>
+                        <div class="left-desc">
+
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Product)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.FatherName)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Contact)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Address)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Course)
+                                        </th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Product)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.FatherName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Contact)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Address)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Course)
+                            </td>
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
+                                <a asp-action="Details" asp-route-id="@item.id">Details</a> |
+                                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+                            </td>
+                        </tr>}
+                                </tbody>
+                            </table>
+
+
+                        </div>
+
+                        <div class="clear"></div>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,42 @@
+﻿
+@{ ViewData["Title"] = "login";
+                Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+
+<h1>LOGIN</h1>
+
+<div class="wrap">
+    <div class="wrapper">
+        <div class="content">
+            <div class="contact">
+                <div class="contact-left">
+                    <div class="contact-desc">
+                        <h3>Login</h3>
+                        <p>Enter your Registered Email and Password. </p>
+                    </div>
+
+                    <form method="post" action="sign_In">
+
+                        <div class="form-control">
+                            <input type="text" class="col-md-12" name="userNme" id="userNme" placeholder="Enter User Name " required="" />
+                        </div>
+
+                        <div class="form-control">
+                            <input type="password" class="col-md-12" name="userPssword" id="userPssword" placeholder="Enter User Password " required="" />
+                        </div>
+
+                        <div class="form-control">
+                            <input type="submit" value="Sign IN" class="col-md-12 btn btn-warning" id="subtn" />
+                        </div>
+                    </form>
+
+
+                </div>
+                <div class="sidebar">
+
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</div>

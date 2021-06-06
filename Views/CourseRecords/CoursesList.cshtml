@@ -1,0 +1,89 @@
+﻿@model IEnumerable<EductionFinalProject.Models.CourseRecord>
+
+@{
+    ViewData["Title"] = "CoursesList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<style>
+
+    * {
+        text-align: center;
+    }
+
+    tr {
+        border: 2px solid black;
+    }
+
+    th {
+        border: 2px solid black;
+    }
+
+    td {
+        border: 2px solid black;
+    }
+
+
+    .table {
+        margin: auto;
+        font-size: 25px;
+    }
+
+    h1 {
+        background-color: aqua;
+        color: black;
+        font-size: 20px;
+        padding: 20px;
+        margin-bottom: 15px;
+    }
+</style>
+
+
+
+
+
+<h1>CoursesList</h1>
+
+<div class="container">
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Product)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Duration)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Fee)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+
+
+
+                @foreach (var item in Model)
+                {
+                    <div class="col-md-4">
+                        <tr>
+                            <td>
+                                <h1>@Html.DisplayFor(modelItem => item.Product)</h1>
+                            </td>
+                            <td>
+                                <h1>@Html.DisplayFor(modelItem => item.Duration)</h1>
+                            </td>
+                            <td>
+                                <h1>@Html.DisplayFor(modelItem => item.Fee)</h1>
+                            </td>
+                            </tr>
+                    </div>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
